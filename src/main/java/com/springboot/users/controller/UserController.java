@@ -1,6 +1,4 @@
-package com.webknot.users.controller;
-import com.webknot.users.model.User;
-
+package com.springboot.users.controller;
 import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.webknot.users.service.UserService;
+import com.springboot.users.model.User;
+import com.springboot.users.service.UserService;
 
 @RestController
 public class UserController {

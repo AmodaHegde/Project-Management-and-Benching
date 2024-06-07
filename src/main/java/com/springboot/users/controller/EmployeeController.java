@@ -1,4 +1,4 @@
-package com.webknot.users.controller;
+package com.springboot.users.controller;
 
 import java.util.List;
 import java.util.Map;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.webknot.users.model.Employee;
-import com.webknot.users.service.EmployeeService;
+import com.springboot.users.model.Employee;
+import com.springboot.users.service.EmployeeService;
 
 @RestController
 public class EmployeeController {

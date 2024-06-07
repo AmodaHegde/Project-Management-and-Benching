@@ -1,7 +1,7 @@
-package com.webknot.users.dto;
+package com.springboot.users.dto;
 
-import com.webknot.users.model.Employee;
-import com.webknot.users.model.Project;
+import com.springboot.users.model.Employee;
+import com.springboot.users.model.Project;
 
 public class ProjectDetailsWithEmployeesResponse {
     private Project project;

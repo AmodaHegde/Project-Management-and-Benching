@@ -1,4 +1,4 @@
-package com.webknot.users;
+package com.springboot.users;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

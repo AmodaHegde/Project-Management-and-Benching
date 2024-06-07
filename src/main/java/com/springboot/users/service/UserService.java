@@ -1,13 +1,13 @@
-package com.webknot.users.service;
+package com.springboot.users.service;
 
 import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.webknot.users.model.Role;
-import com.webknot.users.model.User;
-import com.webknot.users.repository.UserRepo;
+import com.springboot.users.model.Role;
+import com.springboot.users.model.User;
+import com.springboot.users.repository.UserRepo;
 
 @Service
 public class UserService{

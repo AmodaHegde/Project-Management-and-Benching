@@ -1,4 +1,4 @@
-package com.webknot.users.model;
+package com.springboot.users.model;
 
 import java.util.List;
 

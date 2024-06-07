@@ -1,8 +1,8 @@
-package com.webknot.users.repository;
+package com.springboot.users.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.webknot.users.model.Employee;
+import com.springboot.users.model.Employee;
 
 public interface EmployeeRepo extends JpaRepository<Employee, Long>{
  

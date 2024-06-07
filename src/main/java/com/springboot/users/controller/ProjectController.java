@@ -1,4 +1,4 @@
-package com.webknot.users.controller;
+package com.springboot.users.controller;
 
 import java.util.List;
 import java.util.Map;
@@ -12,15 +12,17 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.webknot.users.controller.errors.InactiveProjectException;
-import com.webknot.users.dto.ProjectDetailsWithEmployeesResponse;
-import com.webknot.users.model.EnumProjStatus;
-import com.webknot.users.model.Project;
-import com.webknot.users.repository.ProjectRepo;
-import com.webknot.users.service.ProjectService;
+import com.springboot.users.controller.errors.InactiveProjectException;
+import com.springboot.users.dto.ProjectDetailsWithEmployeesResponse;
+import com.springboot.users.model.EnumProjStatus;
+import com.springboot.users.model.Project;
+import com.springboot.users.repository.ProjectRepo;
+import com.springboot.users.service.ProjectService;
 
 @RestController
 public class ProjectController {
+
+    //can be implemented inplace of dto
 
     static class ProjectRequest {
         public Project getProject() {
@@ -46,11 +48,15 @@ public class ProjectController {
         private Long projectManagerId;
     }
 
+    // field injection
+
     @Autowired
     private ProjectService projectService;
 
     @Autowired
     private ProjectRepo projectRepo;
+
+    //creation of projects
 
     @PostMapping("/project/create")
     public void createProject(@RequestBody ProjectRequest request){
@@ -61,20 +67,28 @@ public class ProjectController {
     );
     }
 
+    //getting project details by id
+
     @GetMapping("/project/get-project/{projectId}")
     public Project getProject(@PathVariable("projectId") Long projectId){
         return projectService.getProject(projectId);
     }
+
+    // getting all projects
 
     @GetMapping("/project/get-all-projects")
     public List<ProjectDetailsWithEmployeesResponse> getAllProjects(){
         return projectService.getAllProjectDetails();
     }
 
+    // removing employees from project by id
+
     @DeleteMapping("/project/{proj_id}/remove-employee/{emp_id}")
     public void removeEmpFromProj(@PathVariable() Long proj_id, @PathVariable() Long emp_id) {
         projectService.removeEmpFromProj(proj_id, emp_id);
     }
+
+    // adding employees to projects
 
     @PostMapping("/project/{proj_id}/add-employee")
     public void addEmpToProj(@PathVariable() Long proj_id, @RequestBody Map<String, String> body){
@@ -93,10 +107,14 @@ public class ProjectController {
         }
     }   
 
+    //getting project details with employee
+
     @GetMapping("/project/get-project-details/{proj_id}")
     public ProjectDetailsWithEmployeesResponse  getProjectDetails(@PathVariable() Long proj_id){
         return projectService.getProjectDetails(proj_id);
     }
+
+    //setting projects as inactive
 
     @PutMapping("/project/set-project-null/{projId}")
     public void setStatus(@PathVariable() Long projId){

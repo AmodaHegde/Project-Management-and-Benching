@@ -1,4 +1,4 @@
-package com.webknot.users.service;
+package com.springboot.users.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -6,14 +6,14 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.webknot.users.dto.ProjectDetailsWithEmployeesResponse;
-import com.webknot.users.model.Employee;
-import com.webknot.users.model.EnumProjStatus;
-import com.webknot.users.model.Project;
-import com.webknot.users.model.ProjectAlloc;
-import com.webknot.users.repository.EmployeeRepo;
-import com.webknot.users.repository.ProjectAllocRepo;
-import com.webknot.users.repository.ProjectRepo;
+import com.springboot.users.dto.ProjectDetailsWithEmployeesResponse;
+import com.springboot.users.model.Employee;
+import com.springboot.users.model.EnumProjStatus;
+import com.springboot.users.model.Project;
+import com.springboot.users.model.ProjectAlloc;
+import com.springboot.users.repository.EmployeeRepo;
+import com.springboot.users.repository.ProjectAllocRepo;
+import com.springboot.users.repository.ProjectRepo;
 
 @Service
 public class ProjectService {
