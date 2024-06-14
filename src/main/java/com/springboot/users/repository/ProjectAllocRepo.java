@@ -1,13 +1,13 @@
-package com.webknot.users.repository;
+package com.springboot.users.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.webknot.users.model.Employee;
-import com.webknot.users.model.Project;
-import com.webknot.users.model.ProjectAlloc;
+import com.springboot.users.model.Employee;
+import com.springboot.users.model.Project;
+import com.springboot.users.model.ProjectAlloc;
 
 public interface ProjectAllocRepo extends JpaRepository<ProjectAlloc, Long>{
     List<ProjectAlloc> findByProjectId(Project project);

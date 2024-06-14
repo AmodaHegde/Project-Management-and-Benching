@@ -1,4 +1,4 @@
-package com.webknot.users.controller.errors;
+package com.springboot.users.controller.errors;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.http.HttpStatus;

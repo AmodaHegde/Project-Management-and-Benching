@@ -1,11 +1,11 @@
-package com.webknot.users.repository;
+package com.springboot.users.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.webknot.users.model.Role;
-import com.webknot.users.model.User;
+import com.springboot.users.model.Role;
+import com.springboot.users.model.User;
 
 public interface UserRepo extends JpaRepository<User, Long>{
     

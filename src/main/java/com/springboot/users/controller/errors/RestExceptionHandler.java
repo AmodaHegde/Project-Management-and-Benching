@@ -1,4 +1,4 @@
-package com.webknot.users.controller.errors;
+package com.springboot.users.controller.errors;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;

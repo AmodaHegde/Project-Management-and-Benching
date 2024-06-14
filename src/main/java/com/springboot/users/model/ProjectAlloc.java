@@ -1,4 +1,4 @@
-package com.webknot.users.model;
+package com.springboot.users.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 

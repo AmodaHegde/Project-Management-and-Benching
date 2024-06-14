@@ -1,4 +1,4 @@
-package com.webknot.users.controller.errors;
+package com.springboot.users.controller.errors;
 
 public class InactiveProjectException extends RuntimeException {
 
